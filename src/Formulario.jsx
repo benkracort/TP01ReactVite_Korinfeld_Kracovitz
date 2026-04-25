@@ -1,4 +1,4 @@
-import { use, useState } from 'react';
+import { useState } from 'react';
 import './Formulario.css'
 
 function Formulario({ agregarCita }) {
@@ -23,7 +23,7 @@ function Formulario({ agregarCita }) {
     return (
         <div className="one-half column">
             <h2>Crear mi Cita</h2>
-            <form>
+            <form onSubmit={submit}>
                 <label>Nombre Mascota</label><input type="text" name="mascota" className="u-full-width" placeholder="Nombre Mascota" value={nombre} onChange={(e) => setNombre(e.target.value)}></input> <br />
                 <label>Nombre Dueño</label><input type="text" name="propietario" className="u-full-width" placeholder="Nombre dueño de la mascota" value={dueno} onChange={(e) => setDueno(e.target.value)}></input> <br />
                 <label>Fecha</label> <input type="date" name="fecha" className="u-full-width" value={fecha} onChange={(e) => setFecha(e.target.value)}></input> <br />

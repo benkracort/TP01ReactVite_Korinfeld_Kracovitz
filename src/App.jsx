@@ -7,17 +7,17 @@ function App() {
   const [citas, setCitas] = useState([])
 
   const agregarCita = (cita) => {
-    setCitas([...Appcitas, cita])
+    setCitas([...citas, cita])
   }
 
   return (
     <>
     <div id="root">
       <h1>ADMINISTRADOR DE PACIENTES</h1>
-      <div class="container">
-        <div class="row">
+      <div className="container">
+        <div className="row">
           <Formulario agregarCita={agregarCita}/>
-          <Listado/>
+          <Listado citas={citas}/>
         </div>
       </div>
     </div>
